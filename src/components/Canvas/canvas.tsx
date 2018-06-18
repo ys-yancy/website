@@ -33,11 +33,6 @@ export default class CanvasBackround extends React.Component<CanvasProps, {}> {
         }
     }
 
-    private bindEvents(): void {
-        let canvasEl = this.getCanvasElement();
-        canvasEl.addEventListener
-    }
-
     public componentDidMount(): void {
         let ctx = this.getCanvas2DContent();
         this.createCanvas(ctx);
@@ -63,8 +58,9 @@ export default class CanvasBackround extends React.Component<CanvasProps, {}> {
         let r = 50;
 
         ctx.lineWidth = 0.5;
+        ctx.globalAlpha = 0.7;
         ctx.lineJoin = "round";
-
+        
         for (let beta = 0; beta <= 2 * Math.PI; beta += increment) {
             let x = R * Math.cos(beta),
                 y = 0,
