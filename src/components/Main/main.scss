@@ -1,0 +1,43 @@
+.main-container {
+    position: absolute;
+    width: 420px;
+    height: 320px;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    opacity: 1;
+    transform: translate3d(-50%, -60%, 0);
+    transition: height .5s ease-in;
+    &.folded {
+        height: 60px;
+        transition: height 1s ease;
+    }
+
+    &>h1 {
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: .3em;
+        cursor: pointer;
+        &.active {
+            color:rgba(0, 0, 0, .5);
+        }
+    }
+   
+    .content-outer{
+        width: 420px;
+        height: 320px;
+        border-radius: 15px;
+        // background: rgba(0, 0 ,0 , .3);
+        transition: height .5s ease-in;
+        h1{
+            line-height: 60px;
+            text-align: center;
+            font-weight: 400;
+            text-shadow: 0 1px 1px #333;
+            cursor: pointer;
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
