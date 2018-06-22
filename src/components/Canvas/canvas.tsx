@@ -114,7 +114,7 @@ export default class CanvasBackround extends React.Component<CanvasProps, {}> {
     }
 
     public getCanvasElement(): HTMLCanvasElement {
-        return document.getElementById('bg-canvas') as HTMLCanvasElement;
+        return document.getElementById('J_Canvas') as HTMLCanvasElement;
     };
 
     public getCanvas2DContent(): any {
@@ -140,7 +140,7 @@ export default class CanvasBackround extends React.Component<CanvasProps, {}> {
         ]
     }
 
-    public render() {
-        return <canvas className={this.props.class} id='bg-canvas' onClick={this.action.bind(this)} onMouseMove={(e) => this.mousreMove(e)}></canvas>
+    public render(): any {
+        return <canvas className={this.props.class} id='J_Canvas' onClick={this.action.bind(this)} onMouseMove={(e) => this.mousreMove(e)}></canvas>
     }
 }

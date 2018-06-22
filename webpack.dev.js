@@ -12,7 +12,13 @@ module.exports = merge(common, {
 
         port: 9000,
 
-        open: true,
+		open: true,
+		
+		historyApiFallback: {
+			rewrites: [
+				{ from: /.*/, to: '/index.html' },
+			]
+		}
     },
   	
     plugins: [

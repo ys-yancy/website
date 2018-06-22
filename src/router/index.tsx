@@ -1,10 +1,16 @@
 export default [{
-    "url": "/ng/gm/notice",
+    "url": "/index",
     "component": (): any => {
-        return null
+        return require.ensure([], () => {
+            return require('../components/Header/header');
+        });
+    }
+
+},{
+    "url": "",
+    "component": (): any => {
+        return require.ensure([], () => {
+            return require('../components/Main/main');
+        });
     }
 }];
-
-// require.ensure([], () => {
-//     return require('../components/Header/header');
-// }, 'ibss-gm/notice')

@@ -4,13 +4,13 @@ interface Props {
     [propName: string]: any
 }
 
-// interface state {
-//     component: any
-// }
+interface state {
+    component: any
+}
 
 export default function asyncComponent(importComponent: any): any {
     class AsyncComponent extends React.Component<Props, {}> {
-        public state: any;
+        public state: state;
         constructor(props: any) {
             super(props);
 

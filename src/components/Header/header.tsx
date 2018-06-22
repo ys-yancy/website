@@ -1,12 +1,12 @@
 import * as React from "react";
 import './header.scss';
 
-interface headerProps {
-	name: string
-}
-
-export class Header extends React.Component<headerProps, {}> {
+export default class Header extends React.Component<{}> {
+	componentDidMount(): void {
+		console.log(1)
+	}
+	
 	render() {
-		return <header>this is {this.props.name } Header</header>
+		return <header>this is Header</header>
 	}
 }
