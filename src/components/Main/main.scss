@@ -1,16 +1,19 @@
 .main-container {
+    --translateY: calc(0%);
     position: absolute;
     width: 420px;
     height: 320px;
-    top: 50%;
+    top: 170px;
     left: 50%;
     overflow: hidden;
     opacity: 1;
-    transform: translate3d(-50%, -60%, 0);
-    transition: height .5s ease-in;
+    transform: translate3d(-50%, var(--translateY), 0);
+    transition: all .5s ease-in;
+    transform-origin: bottom;
     &.folded {
+        top: 322px;
         height: 60px;
-        transition: height 1s ease;
+        transition: all 1s ease;
     }
 
     &>h1 {

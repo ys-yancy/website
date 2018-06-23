@@ -38,9 +38,10 @@ export class Dot3d {
             (document.documentElement.clientWidth ||
                     document.body.clientWidth ||
                     window.innerWidth) / 2,
-            (document.documentElement.clientHeight ||
-                    document.body.clientHeight ||
-                    window.innerHeight) / 5
+            150
+            // (document.documentElement.clientHeight ||
+            //         document.body.clientHeight ||
+            //         window.innerHeight) / 5
         ]
     }
 
