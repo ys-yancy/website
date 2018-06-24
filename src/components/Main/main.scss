@@ -33,7 +33,6 @@
         width: 420px;
         height: 320px;
         border-radius: 15px;
-        // background: rgba(0, 0 ,0 , .3);
         transition: height .5s ease-in;
         h1{
             line-height: 60px;
@@ -43,6 +42,24 @@
             cursor: pointer;
             &:hover {
                 opacity: .7;
+            }
+        }
+        .content{
+            font-size: 15px;
+            padding-top: 36px;
+            text-align: center;
+            letter-spacing: .1em;
+            p {
+                
+                line-height: 24px;
+            }
+            a {
+                color: #999;
+                transition: color .3s ease;
+                text-decoration: none;
+                &:hover {
+                    color: rgba(0, 0, 0, .9);
+                }
             }
         }
     }

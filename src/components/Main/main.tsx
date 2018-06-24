@@ -1,8 +1,14 @@
 import * as React from "react";
 import './main.scss';
 
+interface state {
+    classNames: string;
+    toggleClassName: string;
+    folded: boolean;
+}
+
 export default class MainContainer extends React.Component<{}> {
-    public state: any;
+    public state: state;
     constructor(options: any) {
         super(options);
 
@@ -29,7 +35,7 @@ export default class MainContainer extends React.Component<{}> {
         // });
     }
 
-    render() {
+    render(): any {
         const { classNames, toggleClassName, folded } = this.state;
         return (
             <section className={classNames}>
@@ -43,7 +49,9 @@ export default class MainContainer extends React.Component<{}> {
                             <div className='header'>
                                 <h1 onClick={this.action.bind(this)}>Yancy's Personal Website</h1>
                             </div>
-                            <div className='content'></div>
+                            <div className='content'>
+                                <p><a href="https://github.com/ys-yancy" target="_blank">Github</a></p>
+                            </div>
                             <div className='footer'></div>
                         </div>
                 }

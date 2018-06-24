@@ -32,17 +32,25 @@ module.exports = {
     	rules: [
 		    {
 		        test: /\.css$/,
-		        use: [ 'style-loader', 'css-loader']
+				use: ['style-loader', {
+					loader: 'css-loader',
+					options: {
+						minimize: true
+					}
+				}]
 		    },
 
     		{
 		      	test: /\.scss$/,
 		      	use: [
 		      		{
-		          		loader: "style-loader"
+						loader: "style-loader"
 		      		},	
 		      		{
-		          		loader: "css-loader"
+						loader: "css-loader",
+						options: {
+							minimize: true
+						}
 		      		},
 		      		{
 		          		loader: "sass-loader"
