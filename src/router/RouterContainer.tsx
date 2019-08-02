@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import asyncComponent from '../components/asyncComponent/index';
-import MainComponent from '../components/main/main';
 import routers from '../router/index';
 
 interface ReactComponent {
